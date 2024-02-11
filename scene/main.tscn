@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cvowxpxiloeqd"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_aafbv"]
+[ext_resource type="Script" path="res://script/main.gd" id="1_fib07"]
 [ext_resource type="AudioStream" uid="uid://b675jpnhdhg2m" path="res://asset/audio/background.ogg" id="1_nfww5"]
 [ext_resource type="Texture2D" uid="uid://clyvk5t4pliwq" path="res://asset/image/pause.svg" id="1_x0aey"]
 [ext_resource type="Texture2D" uid="uid://cvqw5jx1wry2v" path="res://asset/image/holder.svg" id="2_4x6bb"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cpubplg1yignr" path="res://asset/image/loop.svg" id="8_2rkdx"]
 
 [node name="MainScene" type="Node2D"]
-script = ExtResource("1_aafbv")
+script = ExtResource("1_fib07")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_nfww5")
