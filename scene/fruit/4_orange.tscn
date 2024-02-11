@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://csj1hm7an3sts"]
+
+[ext_resource type="Texture2D" uid="uid://25kmmej8rh7u" path="res://asset/image/fruit/4_orange.svg" id="1_urmyv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
+radius = 193.03
+
+[node name="4Orange" type="Node2D"]
+scale = Vector2(0.282, 0.282)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_urmyv")
+offset = Vector2(2.08165e-12, -22)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_lckc8")

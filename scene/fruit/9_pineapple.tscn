@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://csy1w4uwxiakx"]
+
+[ext_resource type="Texture2D" uid="uid://chy2t4mr7yev2" path="res://asset/image/fruit/9_pineapple.svg" id="1_tk6hg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
+radius = 193.03
+
+[node name="9Pineapple" type="Node2D"]
+scale = Vector2(0.704, 0.704)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_tk6hg")
+offset = Vector2(2.08165e-12, -21)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_lckc8")

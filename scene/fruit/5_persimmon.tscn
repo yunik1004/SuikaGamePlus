@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cinhwtiqbmu8o"]
+
+[ext_resource type="Texture2D" uid="uid://bpn5gn3vll4t" path="res://asset/image/fruit/5_persimmon.svg" id="1_7vbh8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
+radius = 193.03
+
+[node name="5Persimmon" type="Node2D"]
+scale = Vector2(0.347, 0.347)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_7vbh8")
+offset = Vector2(2.08165e-12, -14)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_lckc8")

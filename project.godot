@@ -11,5 +11,16 @@ config_version=5
 [application]
 
 config/name="SuikaGamePlus"
+run/main_scene="res://scene/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://asset/image/icon.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/resizable=false
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.756863, 0.596078, 0.388235, 1)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct24wh2sxdmj7"
-path="res://.godot/imported/icon.svg-635c9cd9560944100972280930a50328.ctex"
+uid="uid://ca6fi1kn7gtvg"
+path="res://.godot/imported/10_melon.svg-f652a22b6a01aa9aaf394b7cd9ed9865.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-635c9cd9560944100972280930a50328.ctex"]
+source_file="res://asset/image/fruit/10_melon.svg"
+dest_files=["res://.godot/imported/10_melon.svg-f652a22b6a01aa9aaf394b7cd9ed9865.ctex"]
 
 [params]
 

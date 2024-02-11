@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4xauqltter6h"]
+
+[ext_resource type="Texture2D" uid="uid://ca6fi1kn7gtvg" path="res://asset/image/fruit/10_melon.svg" id="1_bdwnw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
+radius = 193.03
+
+[node name="10Melon" type="Node2D"]
+scale = Vector2(0.86, 0.86)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_bdwnw")
+offset = Vector2(2.08165e-12, -17)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_lckc8")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3cakio7lw380"]
+
+[ext_resource type="Texture2D" uid="uid://f2g1t2xra047" path="res://asset/image/fruit/8_peach.svg" id="1_y6k56"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
+radius = 193.03
+
+[node name="8Peach" type="Node2D"]
+scale = Vector2(0.61, 0.61)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y6k56")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_lckc8")

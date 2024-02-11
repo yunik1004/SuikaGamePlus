@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhdy8lqwipnjh"]
+
+[ext_resource type="Texture2D" uid="uid://ch5gm66fkmijs" path="res://asset/image/fruit/3_grape.svg" id="1_gge18"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
+radius = 197.0
+
+[node name="3Grape" type="Node2D"]
+scale = Vector2(0.243, 0.243)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_gge18")
+offset = Vector2(2.08165e-12, -39)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_lckc8")
