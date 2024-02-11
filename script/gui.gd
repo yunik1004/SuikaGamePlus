@@ -20,5 +20,5 @@ func _on_close_button_pressed():
 
 
 func _on_scene_restart():
-	$TopPannel/Score.text = "Score: %d\nBest Score: %d" % [scene.score, scene.score_best]	
+	$TopPannel/Score.text = "Score: %d\nBest Score: %d" % [scene.score, scene.score_best]
 	pause_pannel.visible = false
