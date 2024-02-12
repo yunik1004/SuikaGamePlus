@@ -1,21 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://coyj7xcqncejp"]
+[gd_scene load_steps=3 format=3 uid="uid://r6pmfhok34ka"]
 
 [ext_resource type="Texture2D" uid="uid://cj8ffpkxxymqq" path="res://asset/image/fruit/1_cherry.svg" id="1_5brcb"]
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_ss5vs"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
-radius = 193.03
+[node name="1Cherry" instance=ExtResource("1_ss5vs")]
 
-[node name="1Cherry" type="Node2D"]
+[node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.128, 0.128)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
 texture = ExtResource("1_5brcb")
 offset = Vector2(2.08165e-12, -39)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("CircleShape2D_lckc8")
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.128, 0.128)

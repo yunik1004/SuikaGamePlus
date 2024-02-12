@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca3nv62vy3iny"]
+
+[ext_resource type="Texture2D" uid="uid://b5mmk2op24810" path="res://asset/image/pannel.svg" id="1_548p7"]
+[ext_resource type="Script" path="res://script/ui/pannel_pause.gd" id="1_ta8n5"]
+[ext_resource type="Texture2D" uid="uid://d1i1o2xw8qrs4" path="res://asset/image/x.svg" id="2_k84n2"]
+[ext_resource type="Texture2D" uid="uid://wmg4uk5us5ot" path="res://asset/image/button_brown.svg" id="3_voycv"]
+[ext_resource type="Texture2D" uid="uid://cpubplg1yignr" path="res://asset/image/loop.svg" id="4_gb6yv"]
+
+[node name="PausePannel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ta8n5")
+
+[node name="MainPannel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -542.0
+offset_right = 309.0
+offset_bottom = 542.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_548p7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CloseButton" type="TextureButton" parent="MainPannel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 28.0
+offset_right = -28.0
+offset_bottom = 88.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_k84n2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RestartButton" type="TextureButton" parent="MainPannel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.5
+offset_top = -129.0
+offset_right = 125.5
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_voycv")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MainPannel/RestartButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -29.5
+offset_right = 61.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0.815686, 0.513726, 1)
+theme_override_colors/font_shadow_color = Color(0.611765, 0.443137, 0.207843, 1)
+theme_override_font_sizes/font_size = 35
+text = "Restart"
+
+[node name="Maker" type="Label" parent="MainPannel"]
+layout_mode = 0
+offset_left = 63.5
+offset_top = 44.0
+offset_right = 342.5
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.611765, 0.443137, 0.207843, 1)
+theme_override_colors/font_shadow_color = Color(0.733333, 0.603922, 0.415686, 1)
+theme_override_font_sizes/font_size = 30
+text = "Made by yunik1004"
+
+[node name="Loop" type="TextureRect" parent="MainPannel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -232.0
+offset_right = 232.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gb6yv")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="pressed" from="MainPannel/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MainPannel/RestartButton" to="." method="_on_restart_button_pressed"]

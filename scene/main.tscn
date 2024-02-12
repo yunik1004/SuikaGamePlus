@@ -1,15 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvowxpxiloeqd"]
+[gd_scene load_steps=7 format=3 uid="uid://cvowxpxiloeqd"]
 
 [ext_resource type="Script" path="res://script/main.gd" id="1_fib07"]
 [ext_resource type="AudioStream" uid="uid://b675jpnhdhg2m" path="res://asset/audio/background.ogg" id="1_nfww5"]
-[ext_resource type="Texture2D" uid="uid://clyvk5t4pliwq" path="res://asset/image/pause.svg" id="1_x0aey"]
-[ext_resource type="Texture2D" uid="uid://cvqw5jx1wry2v" path="res://asset/image/holder.svg" id="2_4x6bb"]
-[ext_resource type="Script" path="res://script/gui.gd" id="2_b74le"]
-[ext_resource type="Texture2D" uid="uid://cymwc2vax6vab" path="res://asset/image/box.svg" id="4_k7e4w"]
-[ext_resource type="Texture2D" uid="uid://b5mmk2op24810" path="res://asset/image/pannel.svg" id="5_8laov"]
-[ext_resource type="Texture2D" uid="uid://d1i1o2xw8qrs4" path="res://asset/image/x.svg" id="6_lsmkh"]
-[ext_resource type="Texture2D" uid="uid://wmg4uk5us5ot" path="res://asset/image/button_brown.svg" id="7_bjnxc"]
-[ext_resource type="Texture2D" uid="uid://cpubplg1yignr" path="res://asset/image/loop.svg" id="8_2rkdx"]
+[ext_resource type="Script" path="res://script/gui_main.gd" id="2_b74le"]
+[ext_resource type="PackedScene" uid="uid://d01vhnje25l06" path="res://scene/ui/pannel_top.tscn" id="4_rqvte"]
+[ext_resource type="PackedScene" uid="uid://dcn4mx5lmmok6" path="res://scene/object/box.tscn" id="6_bvoix"]
+[ext_resource type="PackedScene" uid="uid://ca3nv62vy3iny" path="res://scene/ui/pannel_pause.tscn" id="6_xqsrd"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_fib07")
@@ -21,172 +17,19 @@ autoplay = true
 [node name="GUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_b74le")
 
-[node name="TopPannel" type="Control" parent="GUI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TopPannel" parent="GUI" instance=ExtResource("4_rqvte")]
 
-[node name="Score" type="Label" parent="GUI/TopPannel"]
-layout_mode = 0
-offset_left = 116.0
-offset_top = 40.0
-offset_right = 360.0
-offset_bottom = 153.0
-theme_override_colors/font_color = Color(0.972549, 0.815686, 0.513726, 1)
-theme_override_colors/font_shadow_color = Color(0.611765, 0.443137, 0.207843, 1)
-theme_override_font_sizes/font_size = 40
-text = "Score: 0
-Best Score: 0"
-
-[node name="PauseButton" type="TextureButton" parent="GUI/TopPannel"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 63.0
-offset_right = 90.0
-offset_bottom = 126.0
-texture_normal = ExtResource("1_x0aey")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Next" type="Label" parent="GUI/TopPannel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 569.0
-offset_top = 9.0
-offset_right = 639.0
-offset_bottom = 51.0
-grow_horizontal = 0
-theme_override_colors/font_color = Color(0.972549, 0.815686, 0.513726, 1)
-theme_override_colors/font_shadow_color = Color(0.611765, 0.443137, 0.207843, 1)
-theme_override_font_sizes/font_size = 30
-text = "Next"
-
-[node name="Holder" type="TextureRect" parent="GUI/TopPannel/Next"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -82.0
-offset_top = 44.0
-offset_right = 16.0
-offset_bottom = 142.0
-grow_horizontal = 0
-texture = ExtResource("2_4x6bb")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="PausePannel" type="Control" parent="GUI"]
+[node name="PausePannel" parent="GUI" instance=ExtResource("6_xqsrd")]
 visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Background" type="TextureRect" parent="GUI/PausePannel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 31.0
-offset_top = 78.0
-offset_right = 649.0
-offset_bottom = 1162.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_8laov")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="CloseButton" type="TextureButton" parent="GUI/PausePannel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 535.0
-offset_top = 130.0
-offset_right = 595.0
-offset_bottom = 190.0
-grow_horizontal = 0
-texture_normal = ExtResource("6_lsmkh")
-ignore_texture_size = true
-stretch_mode = 4
-
-[node name="RestartButton" type="TextureButton" parent="GUI/PausePannel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 214.5
-offset_top = 1019.0
-offset_right = 465.5
-offset_bottom = 1093.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("7_bjnxc")
-ignore_texture_size = true
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="GUI/PausePannel/RestartButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -61.0
-offset_top = -29.5
-offset_right = 61.0
-offset_bottom = 19.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.972549, 0.815686, 0.513726, 1)
-theme_override_colors/font_shadow_color = Color(0.611765, 0.443137, 0.207843, 1)
-theme_override_font_sizes/font_size = 35
-text = "Restart"
-
-[node name="Maker" type="Label" parent="GUI/PausePannel"]
-layout_mode = 0
-offset_left = 114.5
-offset_top = 142.0
-offset_right = 393.5
-offset_bottom = 184.0
-theme_override_colors/font_color = Color(0.611765, 0.443137, 0.207843, 1)
-theme_override_colors/font_shadow_color = Color(0.733333, 0.603922, 0.415686, 1)
-theme_override_font_sizes/font_size = 30
-text = "Made by yunik1004"
-
-[node name="Loop" type="TextureRect" parent="GUI/PausePannel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 108.0
-offset_top = 388.0
-offset_right = 572.0
-offset_bottom = 852.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_2rkdx")
-expand_mode = 1
-stretch_mode = 4
 
 [node name="Background" type="Node2D" parent="."]
 
-[node name="Box" type="Sprite2D" parent="Background"]
+[node name="Box" parent="Background" instance=ExtResource("6_bvoix")]
 position = Vector2(359.875, 777.96)
-scale = Vector2(0.544129, 0.51909)
-texture = ExtResource("4_k7e4w")
+
+[node name="Fruits" type="Node2D" parent="."]
 
 [connection signal="restart" from="." to="GUI" method="_on_scene_restart"]
-[connection signal="pressed" from="GUI/TopPannel/PauseButton" to="GUI" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="GUI/PausePannel/CloseButton" to="GUI" method="_on_close_button_pressed"]
-[connection signal="pressed" from="GUI/PausePannel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pause" from="GUI/TopPannel" to="GUI" method="_on_top_pannel_pause"]
+[connection signal="close" from="GUI/PausePannel" to="GUI" method="_on_pause_pannel_close"]
+[connection signal="restart" from="GUI/PausePannel" to="GUI" method="_on_pause_pannel_restart"]

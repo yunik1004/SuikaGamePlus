@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://d01vhnje25l06"]
+
+[ext_resource type="Texture2D" uid="uid://clyvk5t4pliwq" path="res://asset/image/pause.svg" id="1_c5ibg"]
+[ext_resource type="Script" path="res://script/ui/pannel_top.gd" id="1_xlb7w"]
+[ext_resource type="Texture2D" uid="uid://cvqw5jx1wry2v" path="res://asset/image/holder.svg" id="2_3lseg"]
+
+[node name="TopPannel" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 192.0
+grow_horizontal = 2
+script = ExtResource("1_xlb7w")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 40.0
+offset_right = 360.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.972549, 0.815686, 0.513726, 1)
+theme_override_colors/font_shadow_color = Color(0.611765, 0.443137, 0.207843, 1)
+theme_override_font_sizes/font_size = 40
+text = "Score: 0
+Best Score: 0"
+
+[node name="PauseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 63.0
+offset_right = 90.0
+offset_bottom = 126.0
+texture_normal = ExtResource("1_c5ibg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Next" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -134.0
+offset_bottom = 166.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="Next"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = 15.0
+offset_right = 35.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.972549, 0.815686, 0.513726, 1)
+theme_override_colors/font_shadow_color = Color(0.611765, 0.443137, 0.207843, 1)
+theme_override_font_sizes/font_size = 30
+text = "Next"
+
+[node name="Holder" type="TextureRect" parent="Next"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -26.0
+offset_right = 49.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3lseg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="FruitImage" type="TextureRect" parent="Next/Holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 4
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

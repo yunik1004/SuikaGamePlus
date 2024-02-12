@@ -1,20 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmhenmgvovotl"]
+[gd_scene load_steps=3 format=3 uid="uid://cutudexltwq7c"]
 
-[ext_resource type="Texture2D" uid="uid://c0su05m8kwv5c" path="res://asset/image/fruit/2_strawberry.svg" id="1_e7afy"]
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_l0bow"]
+[ext_resource type="Texture2D" uid="uid://c0su05m8kwv5c" path="res://asset/image/fruit/2_strawberry.svg" id="2_e6sf0"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
-radius = 193.03
+[node name="2Strawberry" instance=ExtResource("1_l0bow")]
 
-[node name="2Strawberry" type="Node2D"]
+[node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.183, 0.183)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
-texture = ExtResource("1_e7afy")
+texture = ExtResource("2_e6sf0")
 offset = Vector2(2.08165e-12, -34)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("CircleShape2D_lckc8")
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.183, 0.183)

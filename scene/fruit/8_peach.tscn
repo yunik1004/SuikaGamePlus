@@ -1,18 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3cakio7lw380"]
+[gd_scene load_steps=3 format=3 uid="uid://cexphg1x7psvc"]
 
-[ext_resource type="Texture2D" uid="uid://f2g1t2xra047" path="res://asset/image/fruit/8_peach.svg" id="1_y6k56"]
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_54s1y"]
+[ext_resource type="Texture2D" uid="uid://f2g1t2xra047" path="res://asset/image/fruit/8_peach.svg" id="2_6jcy2"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lckc8"]
-radius = 193.03
+[node name="8Peach" instance=ExtResource("1_54s1y")]
 
-[node name="8Peach" type="Node2D"]
+[node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.61, 0.61)
+texture = ExtResource("2_6jcy2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_y6k56")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("CircleShape2D_lckc8")
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.61, 0.61)
