@@ -1,6 +1,7 @@
 extends Node2D
 
 signal score_update
+signal game_end
 
 @export var fruit_init_pos_y_offset: int = -30
 
@@ -90,3 +91,7 @@ func _sample_fruit_idx(turn: int) -> int:
 func update_score(score_plus: int):
 	score += score_plus
 	emit_signal("score_update")
+
+
+func _on_box_full():
+	emit_signal("game_end")

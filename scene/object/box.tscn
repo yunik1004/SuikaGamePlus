@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://script/object/box.gd" id="2_c8ogc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vm2qr"]
-size = Vector2(720, 20)
+size = Vector2(670, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpkfq"]
 size = Vector2(20, 1000)
@@ -32,3 +32,12 @@ shape = SubResource("RectangleShape2D_vpkfq")
 [node name="CollisionRight" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(350, 2.08165e-12)
 shape = SubResource("RectangleShape2D_08x4r")
+
+[node name="CheckFull" type="Area2D" parent="."]
+
+[node name="CollisionTop" type="CollisionShape2D" parent="CheckFull"]
+position = Vector2(2.08165e-12, -410)
+shape = SubResource("RectangleShape2D_vm2qr")
+
+[connection signal="body_entered" from="CheckFull" to="." method="_on_check_full_body_entered"]
+[connection signal="body_exited" from="CheckFull" to="." method="_on_check_full_body_exited"]

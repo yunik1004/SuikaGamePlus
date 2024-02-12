@@ -21,8 +21,13 @@ func _on_pause_pannel_close():
 
 func _on_pause_pannel_restart():
 	_pause_pannel.visible = false
+	$EndPannel.visible = false
 	emit_signal("restart")
 
 
 func _on_main_scene_score_update():
 	$TopPannel.set_score(_scene.score, _scene.score_best)
+
+
+func _on_main_scene_game_end():
+	$EndPannel.visible = true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvowxpxiloeqd"]
+[gd_scene load_steps=8 format=3 uid="uid://cvowxpxiloeqd"]
 
 [ext_resource type="Script" path="res://script/main.gd" id="1_fib07"]
 [ext_resource type="AudioStream" uid="uid://b675jpnhdhg2m" path="res://asset/audio/background.ogg" id="1_nfww5"]
 [ext_resource type="Script" path="res://script/gui_main.gd" id="2_b74le"]
 [ext_resource type="PackedScene" uid="uid://d01vhnje25l06" path="res://scene/ui/pannel_top.tscn" id="4_rqvte"]
+[ext_resource type="PackedScene" uid="uid://dowcnaypn35gr" path="res://scene/ui/pannel_end.tscn" id="6_3wxav"]
 [ext_resource type="PackedScene" uid="uid://dcn4mx5lmmok6" path="res://scene/object/box.tscn" id="6_bvoix"]
 [ext_resource type="PackedScene" uid="uid://ca3nv62vy3iny" path="res://scene/ui/pannel_pause.tscn" id="6_xqsrd"]
 
@@ -21,6 +22,10 @@ script = ExtResource("2_b74le")
 
 [node name="PausePannel" parent="GUI" instance=ExtResource("6_xqsrd")]
 visible = false
+z_index = 1
+
+[node name="EndPannel" parent="GUI" instance=ExtResource("6_3wxav")]
+visible = false
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -29,8 +34,10 @@ position = Vector2(359.875, 777.96)
 
 [node name="Fruits" type="Node2D" parent="."]
 
+[connection signal="game_end" from="." to="GUI" method="_on_main_scene_game_end"]
 [connection signal="score_update" from="." to="GUI" method="_on_main_scene_score_update"]
 [connection signal="restart" from="GUI" to="." method="_on_gui_restart"]
 [connection signal="pause" from="GUI/TopPannel" to="GUI" method="_on_top_pannel_pause"]
 [connection signal="close" from="GUI/PausePannel" to="GUI" method="_on_pause_pannel_close"]
 [connection signal="restart" from="GUI/PausePannel" to="GUI" method="_on_pause_pannel_restart"]
+[connection signal="full" from="Background/Box" to="." method="_on_box_full"]
