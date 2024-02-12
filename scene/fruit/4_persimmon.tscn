@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5dlm2lwh54ir"]
+
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_g7vp0"]
+[ext_resource type="Texture2D" uid="uid://hgp3l0plbusq" path="res://asset/image/fruit/4_persimmon.svg" id="2_0fypm"]
+
+[node name="4Persimmon" instance=ExtResource("1_g7vp0")]
+fruit_idx = 4
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.347, 0.347)
+texture = ExtResource("2_0fypm")
+offset = Vector2(2.08165e-12, -14)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.347, 0.347)

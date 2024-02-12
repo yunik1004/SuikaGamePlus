@@ -6,6 +6,8 @@
 radius = 193.03
 
 [node name="Fruit" type="RigidBody2D"]
+max_contacts_reported = 100
+contact_monitor = true
 script = ExtResource("1_w4psc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

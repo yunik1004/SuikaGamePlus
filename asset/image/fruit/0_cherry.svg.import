@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpn5gn3vll4t"
-path="res://.godot/imported/5_persimmon.svg-a33c218e4964e690b68ba3080b141034.ctex"
+uid="uid://fptxogx62tk0"
+path="res://.godot/imported/0_cherry.svg-9923149778769645ba69766a751a75b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/5_persimmon.svg"
-dest_files=["res://.godot/imported/5_persimmon.svg-a33c218e4964e690b68ba3080b141034.ctex"]
+source_file="res://asset/image/fruit/0_cherry.svg"
+dest_files=["res://.godot/imported/0_cherry.svg-9923149778769645ba69766a751a75b3.ctex"]
 
 [params]
 

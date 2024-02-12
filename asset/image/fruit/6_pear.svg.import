@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj8ffpkxxymqq"
-path="res://.godot/imported/1_cherry.svg-568116118438dd54d3822100b1baae76.ctex"
+uid="uid://bjrwp1iqbvout"
+path="res://.godot/imported/6_pear.svg-2ec9bc3f357f113242ac507e2ce599c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/1_cherry.svg"
-dest_files=["res://.godot/imported/1_cherry.svg-568116118438dd54d3822100b1baae76.ctex"]
+source_file="res://asset/image/fruit/6_pear.svg"
+dest_files=["res://.godot/imported/6_pear.svg-2ec9bc3f357f113242ac507e2ce599c5.ctex"]
 
 [params]
 

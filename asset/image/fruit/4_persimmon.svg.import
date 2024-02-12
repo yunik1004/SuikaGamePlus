@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xw3f6wbxagdu"
-path="res://.godot/imported/11_watermelon.svg-d96da74e0ba0e8e7eed37790b6959aae.ctex"
+uid="uid://hgp3l0plbusq"
+path="res://.godot/imported/4_persimmon.svg-f9470fe3055f1cfb86afd8bf9c76aaa9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/11_watermelon.svg"
-dest_files=["res://.godot/imported/11_watermelon.svg-d96da74e0ba0e8e7eed37790b6959aae.ctex"]
+source_file="res://asset/image/fruit/4_persimmon.svg"
+dest_files=["res://.godot/imported/4_persimmon.svg-f9470fe3055f1cfb86afd8bf9c76aaa9.ctex"]
 
 [params]
 

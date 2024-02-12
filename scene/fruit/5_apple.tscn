@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs4wh68ruionp"]
+
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_mkm6t"]
+[ext_resource type="Texture2D" uid="uid://cp0hhr81647wf" path="res://asset/image/fruit/5_apple.svg" id="2_7vo3b"]
+
+[node name="5Apple" instance=ExtResource("1_mkm6t")]
+fruit_idx = 5
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.444, 0.444)
+texture = ExtResource("2_7vo3b")
+offset = Vector2(2.08165e-12, -37)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.444, 0.444)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjayx2chpvqux"]
+
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_xbw6e"]
+[ext_resource type="Texture2D" uid="uid://do4la6ds3tk1b" path="res://asset/image/fruit/8_pineapple.svg" id="2_it6ny"]
+
+[node name="8Pineapple" instance=ExtResource("1_xbw6e")]
+fruit_idx = 8
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.704, 0.704)
+texture = ExtResource("2_it6ny")
+offset = Vector2(2.08165e-12, -21)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.704, 0.704)

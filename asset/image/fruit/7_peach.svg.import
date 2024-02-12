@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://25kmmej8rh7u"
-path="res://.godot/imported/4_orange.svg-cd6492810c85cda3fb891f58254ca82c.ctex"
+uid="uid://t473dkcvqnbd"
+path="res://.godot/imported/7_peach.svg-ac8ddbee25f0dcd6d0734e3950eb8ca6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/4_orange.svg"
-dest_files=["res://.godot/imported/4_orange.svg-cd6492810c85cda3fb891f58254ca82c.ctex"]
+source_file="res://asset/image/fruit/7_peach.svg"
+dest_files=["res://.godot/imported/7_peach.svg-ac8ddbee25f0dcd6d0734e3950eb8ca6.ctex"]
 
 [params]
 

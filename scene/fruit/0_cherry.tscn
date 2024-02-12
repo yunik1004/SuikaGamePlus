@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://r6pmfhok34ka"]
+
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_38btv"]
+[ext_resource type="Texture2D" uid="uid://fptxogx62tk0" path="res://asset/image/fruit/0_cherry.svg" id="2_t1vux"]
+
+[node name="0Cherry" instance=ExtResource("1_38btv")]
+fruit_idx = 0
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.128, 0.128)
+texture = ExtResource("2_t1vux")
+offset = Vector2(2.08165e-12, -39)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.128, 0.128)

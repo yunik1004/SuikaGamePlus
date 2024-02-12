@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0su05m8kwv5c"
-path="res://.godot/imported/2_strawberry.svg-c2740fe19163ec4c5be5101b2f09c5dc.ctex"
+uid="uid://c5l8p3cybpvxe"
+path="res://.godot/imported/2_grape.svg-83781a9f25058eb98bbffaa09cdec12f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/2_strawberry.svg"
-dest_files=["res://.godot/imported/2_strawberry.svg-c2740fe19163ec4c5be5101b2f09c5dc.ctex"]
+source_file="res://asset/image/fruit/2_grape.svg"
+dest_files=["res://.godot/imported/2_grape.svg-83781a9f25058eb98bbffaa09cdec12f.ctex"]
 
 [params]
 

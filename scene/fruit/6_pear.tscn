@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bowgqebh5fmcg"]
+
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_4tm1d"]
+[ext_resource type="Texture2D" uid="uid://bjrwp1iqbvout" path="res://asset/image/fruit/6_pear.svg" id="2_rguhe"]
+
+[node name="6Pear" instance=ExtResource("1_4tm1d")]
+fruit_idx = 6
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.503, 0.503)
+texture = ExtResource("2_rguhe")
+offset = Vector2(2.08165e-12, -17)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.503, 0.503)

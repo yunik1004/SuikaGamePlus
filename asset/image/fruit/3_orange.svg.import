@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch5gm66fkmijs"
-path="res://.godot/imported/3_grape.svg-589c2864fdbad93e01f123fdd70974e7.ctex"
+uid="uid://dn77qaqmcoj16"
+path="res://.godot/imported/3_orange.svg-bc6bdecd33745518c875d06ab02981e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/3_grape.svg"
-dest_files=["res://.godot/imported/3_grape.svg-589c2864fdbad93e01f123fdd70974e7.ctex"]
+source_file="res://asset/image/fruit/3_orange.svg"
+dest_files=["res://.godot/imported/3_orange.svg-bc6bdecd33745518c875d06ab02981e7.ctex"]
 
 [params]
 

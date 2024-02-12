@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxjpxew2ybj01"]
+
+[ext_resource type="PackedScene" uid="uid://dt2ss7l81tpu1" path="res://scene/fruit/fruit.tscn" id="1_2b6rh"]
+[ext_resource type="Texture2D" uid="uid://bhidkalwk1vlp" path="res://asset/image/fruit/10_watermelon.svg" id="2_bbo8k"]
+
+[node name="10Watermelon" instance=ExtResource("1_2b6rh")]
+fruit_idx = 10
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(1.034, 1.034)
+texture = ExtResource("2_bbo8k")
+offset = Vector2(9, 2.08165e-12)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(1.034, 1.034)

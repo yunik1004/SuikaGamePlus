@@ -1,6 +1,6 @@
 extends Node2D
 
-signal restart
+signal score_update
 
 @export var fruit_init_pos_y_offset: int = -30
 
@@ -11,19 +11,14 @@ var fruit_idx_current: int
 var fruit_idx_next: int
 var _fruit_init_pos: Vector2
 var _fruit_current: Fruit
-var _scenes_fruit: Array[PackedScene] = []
 
 @onready var _box = $Background/Box
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for fruit_name in Global.fruit_names:
-		var path: String = "res://scene/fruit/%s.tscn" % [fruit_name]
-		var scene: PackedScene = load(path)
-		_scenes_fruit.append(scene)
 	_fruit_init_pos = Vector2(_box.pos.x, _box.top - _box.border + fruit_init_pos_y_offset)
-	init()
+	_initialize()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,36 +33,40 @@ func _unhandled_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if not event.pressed:
 				_fruit_current.activate_rigidbody()
-				change_turn()
+				_change_turn()
 
 
-func _on_restart_button_pressed():
-	init()
-	emit_signal("restart")
+func _on_gui_restart():
+	_initialize()
 
 
-func init():
+func _initialize():
 	if score > score_best:
 		score_best = score
 	score = 0
+	emit_signal("score_update")
 	turn_current = -1
-	fruit_idx_next = sample_fruit_idx(turn_current)
-	change_turn()
+	fruit_idx_next = _sample_fruit_idx(turn_current)
+	for child in $Fruits.get_children():
+		$Fruits.remove_child(child)
+		child.queue_free()
+	_change_turn()
 
 
-func change_turn():
+func _change_turn():
 	turn_current += 1
 	fruit_idx_current = fruit_idx_next
-	fruit_idx_next = sample_fruit_idx(turn_current + 1)
+	fruit_idx_next = _sample_fruit_idx(turn_current + 1)
 	$GUI/TopPannel.set_next_fruit(fruit_idx_next)
 
-	_fruit_current = _scenes_fruit[fruit_idx_current].instantiate()
+	_fruit_current = Global.scenes_fruit[fruit_idx_current].instantiate()
+	_fruit_current.name = "%s_%d" % [Global.fruit_names[fruit_idx_current], turn_current]
 	_fruit_current.deactivate_rigidbody()
 	_fruit_current.set_position(_fruit_init_pos)
 	$Fruits.add_child(_fruit_current)
 
 
-func sample_fruit_idx(turn: int) -> int:
+func _sample_fruit_idx(turn: int) -> int:
 	var probs: Array[float] = [0.2, 0.2, 0.2, 0.2, 0.2]
 	if turn < 2:
 		probs = [1, 0, 0, 0, 0]
@@ -86,3 +85,8 @@ func sample_fruit_idx(turn: int) -> int:
 			return pdx
 
 	return 0
+
+
+func update_score(score_plus: int):
+	score += score_plus
+	emit_signal("score_update")

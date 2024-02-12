@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byebdxlp1knca"
-path="res://.godot/imported/7_pear.svg-1dcd60062c71389d87a350d03a71f83e.ctex"
+uid="uid://bhidkalwk1vlp"
+path="res://.godot/imported/10_watermelon.svg-96885b37ddcd69e9146267f343e5f820.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/image/fruit/7_pear.svg"
-dest_files=["res://.godot/imported/7_pear.svg-1dcd60062c71389d87a350d03a71f83e.ctex"]
+source_file="res://asset/image/fruit/10_watermelon.svg"
+dest_files=["res://.godot/imported/10_watermelon.svg-96885b37ddcd69e9146267f343e5f820.ctex"]
 
 [params]
 

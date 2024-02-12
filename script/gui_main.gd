@@ -1,5 +1,7 @@
 extends Node
 
+signal restart
+
 @onready var _scene: Node = get_parent()
 @onready var _pause_pannel: Node = $PausePannel
 
@@ -18,5 +20,9 @@ func _on_pause_pannel_close():
 
 
 func _on_pause_pannel_restart():
-	$TopPannel.set_score(_scene.score, _scene.score_best)
 	_pause_pannel.visible = false
+	emit_signal("restart")
+
+
+func _on_main_scene_score_update():
+	$TopPannel.set_score(_scene.score, _scene.score_best)

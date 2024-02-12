@@ -29,7 +29,8 @@ position = Vector2(359.875, 777.96)
 
 [node name="Fruits" type="Node2D" parent="."]
 
-[connection signal="restart" from="." to="GUI" method="_on_scene_restart"]
+[connection signal="score_update" from="." to="GUI" method="_on_main_scene_score_update"]
+[connection signal="restart" from="GUI" to="." method="_on_gui_restart"]
 [connection signal="pause" from="GUI/TopPannel" to="GUI" method="_on_top_pannel_pause"]
 [connection signal="close" from="GUI/PausePannel" to="GUI" method="_on_pause_pannel_close"]
 [connection signal="restart" from="GUI/PausePannel" to="GUI" method="_on_pause_pannel_restart"]
