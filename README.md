@@ -6,7 +6,7 @@ Suika game using Godot 4.2.1
 
 [![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)](https://yunik1004.itch.io/suikagameplus)
 
-We only support Windows and macOS only.
+We only support Windows and macOS.
 
 ## Screenshot
 
